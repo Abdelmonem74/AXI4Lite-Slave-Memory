@@ -1,0 +1,335 @@
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim -voptargs="+acc" -sdfmax "/tb_slave_mem_axi4lite/dut=axi_gls.sdf" work.tb_slave_mem_axi4lite 
+# Start time: 20:00:35 on Jun 24,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_slave_mem_axi4lite(fast)
+# Loading work.slave_mem_axi4lite(fast)
+# Loading work.mem_single_port(fast)
+# Loading work.AND3X6M(fast)
+# Loading work.DFFQX2M(fast)
+# Loading work.DFFRQX2M(fast)
+# Loading work.INVX4M(fast)
+# Loading work.CLKINVX6M(fast)
+# Loading work.OR3X2M(fast)
+# Loading work.INVX6M(fast)
+# Loading work.NAND2X1M(fast)
+# Loading work.CLKBUFX2M(fast)
+# Loading work.CLKBUFX8M(fast)
+# Loading work.INVX2M(fast)
+# Loading work.BUFX6M(fast)
+# Loading work.AND2X2M(fast)
+# Loading work.CLKBUFX6M(fast)
+# Loading work.NAND2X4M(fast)
+# Loading work.NOR2BX8M(fast)
+# Loading work.CLKAND2X4M(fast)
+# Loading work.OAI2BB2X1M(fast)
+# Loading work.MX4X1M(fast)
+# Loading work.AO22X1M(fast)
+# Loading work.CLKINVX2M(fast)
+# Loading work.CLKINVX40M(fast)
+# Loading work.wr_fsm(fast)
+# Loading work.DFFRQX1M(fast)
+# Loading work.DFFSQX1M(fast)
+# Loading work.DFFRQX4M(fast)
+# Loading work.DFFSX2M(fast)
+# Loading work.NOR3X4M(fast)
+# Loading work.AOI211X2M(fast)
+# Loading work.NOR2BX4M(fast)
+# Loading work.CLKBUFX1M(fast)
+# Loading work.NOR2BX1M(fast)
+# Loading work.BUFX4M(fast)
+# Loading work.NAND2X6M(fast)
+# Loading work.NOR2X4M(fast)
+# Loading work.CLKXOR2X2M(fast)
+# Loading work.AO2B2X2M(fast)
+# Loading work.rd_fsm(fast)
+# Loading work.OAI21X1M(fast)
+# Loading work.NOR2X1M(fast)
+# Loading work.NAND2X2M(fast)
+# Loading work.CLKBUFX4M(fast)
+# Loading work.BUFX2M(fast)
+# Loading instances from axi_gls.sdf
+# Loading instances from axi_gls.sdf
+# Loading timing data from axi_gls.sdf
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(471): The interconnect '/tb_slave_mem_axi4lite/dut/U24/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3931/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(473): The interconnect '/tb_slave_mem_axi4lite/dut/U23/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3929/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(475): The interconnect '/tb_slave_mem_axi4lite/dut/U21/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3927/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(476): The interconnect '/tb_slave_mem_axi4lite/dut/U20/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3926/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(494): The interconnect '/tb_slave_mem_axi4lite/dut/U21/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3923/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(548): The interconnect '/tb_slave_mem_axi4lite/dut/U18/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3913/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(1147): The interconnect '/tb_slave_mem_axi4lite/dut/U20/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3804/S0'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(1240): The interconnect '/tb_slave_mem_axi4lite/dut/U24/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3788/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(2409): The interconnect '/tb_slave_mem_axi4lite/dut/U23/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3593/S0'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(4637): The interconnect '/tb_slave_mem_axi4lite/dut/U18/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3221/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(13916): The interconnect '/tb_slave_mem_axi4lite/dut/U19/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U109/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# Loading timing data from axi_gls.sdf
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(471): The interconnect '/tb_slave_mem_axi4lite/dut/U24/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3931/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(473): The interconnect '/tb_slave_mem_axi4lite/dut/U23/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3929/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(475): The interconnect '/tb_slave_mem_axi4lite/dut/U21/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3927/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(476): The interconnect '/tb_slave_mem_axi4lite/dut/U20/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3926/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(494): The interconnect '/tb_slave_mem_axi4lite/dut/U21/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3923/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(548): The interconnect '/tb_slave_mem_axi4lite/dut/U18/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3913/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(1147): The interconnect '/tb_slave_mem_axi4lite/dut/U20/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3804/S0'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(1240): The interconnect '/tb_slave_mem_axi4lite/dut/U24/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3788/S1'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(2409): The interconnect '/tb_slave_mem_axi4lite/dut/U23/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3593/S0'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(4637): The interconnect '/tb_slave_mem_axi4lite/dut/U18/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U3221/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Warning: (vsim-SDF-16107) axi_gls.sdf(13916): The interconnect '/tb_slave_mem_axi4lite/dut/U19/Y' is not connected to the destination '/tb_slave_mem_axi4lite/dut/u0_mem/U109/A'.
+# The interconnect request will be replaced with a port annotation at the destination.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_slave_mem_axi4lite File: tb_slave_mem_axi4lite.sv
+run -all
+# Write OP done| addr = 00 , Data = 00000000
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 245 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 245 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 245 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 245 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 245 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 01 , Data = 00000001
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 469 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 469 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 469 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 469 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 469 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 02 , Data = 00000002
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 595 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 595 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 595 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 595 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 595 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 03 , Data = 00000003
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 791 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 791 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 791 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 791 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 791 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 04 , Data = 00000004
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 903 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 903 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 903 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 903 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 903 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 05 , Data = 00000005
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1071 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1071 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1071 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1071 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1071 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 06 , Data = 00000006
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1183 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1183 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1183 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1183 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1183 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 07 , Data = 00000007
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1365 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1365 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1365 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1365 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1365 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 08 , Data = 00000008
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1575 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1575 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1575 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1575 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1575 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 09 , Data = 00000009
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1715 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1715 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1715 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1715 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1715 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0a , Data = 0000000a
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 1827 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 1827 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 1827 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 1827 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 1827 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0b , Data = 0000000b
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 2023 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 2023 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 2023 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 2023 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 2023 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0c , Data = 0000000c
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 2191 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 2191 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 2191 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 2191 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 2191 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0d , Data = 0000000d
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 2303 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 2303 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 2303 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 2303 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 2303 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0e , Data = 0000000e
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 2485 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 2485 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 2485 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 2485 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 2485 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# Write OP done| addr = 0f , Data = 0000000f
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/axi4lite_cov' is not constructed.
+#    Time: 2597 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_aw' is not constructed.
+#    Time: 2597 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_w' is not constructed.
+#    Time: 2597 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_ar' is not constructed.
+#    Time: 2597 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# ** Error (suppressible): (vsim-12030) Covergroup Builtin function call 'sample' is ignored as the covergroup object of type '/tb_slave_mem_axi4lite/cg_r' is not constructed.
+#    Time: 2597 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite
+# 
+# [SCOREBOARD] Verifying final read values:
+# [READ]   @00 = 00000000 [PASS]
+# [READ]   @01 = 00000001 [PASS]
+# [READ]   @02 = 00000002 [PASS]
+# [READ]   @03 = 00000003 [PASS]
+# [READ]   @04 = 00000004 [PASS]
+# [READ]   @05 = 00000005 [PASS]
+# [READ]   @06 = 00000006 [PASS]
+# [READ]   @07 = 00000007 [PASS]
+# [READ]   @08 = 00000008 [PASS]
+# [READ]   @09 = 00000009 [PASS]
+# [READ]   @0a = 0000000a [PASS]
+# [READ]   @0b = 0000000b [PASS]
+# [READ]   @0c = 0000000c [PASS]
+# [READ]   @0d = 0000000d [PASS]
+# [READ]   @0e = 0000000e [PASS]
+# [READ]   @0f = 0000000f [PASS]
+# Generating coverage report...
+# ** Warning: (vsim-8519) Covergroup 'get_coverage()' builtin was called improperly. (builtin called with no instances of the covergroup type.)
+#    Time: 3269 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite/#ublk#173134613#130
+# Functional coverage: 0.00%
+# ** Warning: (vsim-8519) Covergroup 'get_coverage()' builtin was called improperly. (builtin called with no instances of the covergroup type.)
+#    Time: 3269 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite/#ublk#173134613#130
+# Functional coverage aw: 0.00%
+# ** Warning: (vsim-8519) Covergroup 'get_coverage()' builtin was called improperly. (builtin called with no instances of the covergroup type.)
+#    Time: 3269 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite/#ublk#173134613#130
+# Functional coverage w: 0.00%
+# ** Warning: (vsim-8519) Covergroup 'get_coverage()' builtin was called improperly. (builtin called with no instances of the covergroup type.)
+#    Time: 3269 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite/#ublk#173134613#130
+# Functional coverage ar: 0.00%
+# ** Warning: (vsim-8519) Covergroup 'get_coverage()' builtin was called improperly. (builtin called with no instances of the covergroup type.)
+#    Time: 3269 ns  Iteration: 1  Instance: /tb_slave_mem_axi4lite/#ublk#173134613#130
+# Functional coverage r: 0.00%
+# ** Note: $finish    : tb_slave_mem_axi4lite.sv(190)
+#    Time: 3289 ns  Iteration: 0  Instance: /tb_slave_mem_axi4lite
+# 1
+# Break in Module tb_slave_mem_axi4lite at tb_slave_mem_axi4lite.sv line 190
+# End time: 20:01:07 on Jun 24,2025, Elapsed time: 0:00:32
+# Errors: 80, Warnings: 28

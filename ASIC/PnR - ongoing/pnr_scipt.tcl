@@ -1,0 +1,95 @@
+##########################################
+#   IC Compiler PnR Flow Tcl Script      #
+#   Target: Full RTL-to-GDSII flow       #
+#   Tool: Synopsys IC Compiler (ICC)     #
+##########################################
+################## Library Files ######################
+
+lappend search_path /home/IC/Projects/axi/libraries/std_cells
+lappend search_path /home/IC/Projects/axi/libraries/lef
+lappend search_path /home/IC/Projects/axi/libraries/tf
+lappend search_path /home/IC/Projects/axi/dft
+
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+
+## Standard Cell libraries 
+set target_library [list $TTLIB $FFLIB $SSLIB]
+
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $TTLIB $FFLIB $SSLIB]
+
+# ========= 0. Set Up Environment =========
+set DESIGN_NAME "axi"
+set TECH "tsmc13fsg_4lm.tf"
+set MW_LIB "axi_mw_lib"
+set TOP_MODULE "slave_mem_axi4lite"
+
+# ========= 1. Create Milkyway Library =========
+create_mw_lib $MW_LIB -technology /home/IC/Projects/axi/libraries/tf/tsmc13fsg_4lm.tf -open ##
+set_mw_lib_reference /home/IC/Projects/axi/PnR/axi_mw_lib
+
+
+##set_tlu_plus_files -max_tluplus file_path/file_name.tlup-min_tluplusfile_path/file_name.tlup\-tech2itf_mapfile_path/file_name.map
+
+
+ import_designs /home/IC/Projects/axi/dft/axi_scan.v -format verilog -top $TOP_MODULE -cel axi_pnr
+# ========= 2. Read Design =========
+
+create_mw_cel $DESIGN_NAME
+open_mw_cel $DESIGN_NAME
+
+read_verilog $NETLIST
+current_design $DESIGN_NAME
+link
+check_design
+
+read_sdc $SDC_FILE
+
+# ========= 3. Floorplanning =========
+create_floorplan -core_utilization 0.65 -core_aspect_ratio 1.0 \
+                 -row_core_ratio 0.9 -flip_first_row
+
+derive_pg_connection -power_net VDD -ground_net VSS
+
+# ========= 4. Power Planning =========
+create_power_ring -nets {VDD VSS} -around core -layer {metal5 metal4}
+create_power_straps -direction vertical -layer metal5 -nets {VDD VSS} -step 40
+create_power_straps -direction horizontal -layer metal4 -nets {VDD VSS} -step 40
+derive_pg_connection -power_net VDD -ground_net VSS
+
+# ========= 5. Placement =========
+place_opt -effort high
+check_placement
+
+insert_filler_cells -cell FILLCELL* -prefix FILL
+
+# ========= 6. Clock Tree Synthesis =========
+set_clock_tree_options -target_skew 0.05 -auto_buffer true
+clock_opt -only_cts
+
+# ========= 7. Routing =========
+route_opt
+check_routes
+
+# ========= 8. Chip Finishing =========
+insert_filler_cells -cell FILLCELL* -prefix FILL
+add_tie_cells -lib_cell TIELO/TIEHI
+remove_antenna -cell ANTENNACELL*
+
+# ========= 9. Verification =========
+verify_drc -report ${DESIGN_NAME}_drc.rpt
+verify_lvs -report ${DESIGN_NAME}_lvs.rpt
+report_timing -path full -delay max -npaths 10 > ${DESIGN_NAME}_timing.rpt
+
+# ========= 10. Write Outputs =========
+write_verilog -hierarchy -output ${DESIGN_NAME}_final.v
+write_sdf ${DESIGN_NAME}.sdf
+write_def ${DESIGN_NAME}.def
+write_gds -output ${DESIGN_NAME}.gds
+
+save_mw_cel -as ${DESIGN_NAME}_final
+
+puts "\n=== PnR Flow Completed for $DESIGN_NAME ===\n"
+

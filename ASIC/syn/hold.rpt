@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : slave_mem_axi4lite
+Version: K-2015.06
+Date   : Wed Jun 25 03:39:49 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: axi_slave.AWADDR[5]
+              (input port clocked by CLK)
+  Endpoint: u0_fsm/addr_reg[5]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  slave_mem_axi4lite tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  axi_slave.AWADDR[5] (in)                 0.01       0.21 f
+  u0_fsm/AWADDR[5] (wr_fsm)                0.00       0.21 f
+  u0_fsm/U96/Y (AO22X1M)                   0.30       0.51 f
+  u0_fsm/addr_reg[5]/D (DFFRQX2M)          0.00       0.51 f
+  data arrival time                                   0.51
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  u0_fsm/addr_reg[5]/CK (DFFRQX2M)         0.00       0.50 r
+  library hold time                       -0.04       0.46
+  data required time                                  0.46
+  -----------------------------------------------------------
+  data required time                                  0.46
+  data arrival time                                  -0.51
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+1

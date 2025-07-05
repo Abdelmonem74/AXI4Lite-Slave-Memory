@@ -1,0 +1,78 @@
+icc_shell> start_gui
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> ##########################################
+icc_shell> #   IC Compiler PnR Flow Tcl Script      #
+icc_shell> #   Target: Full RTL-to-GDSII flow       #
+icc_shell> #   Tool: Synopsys IC Compiler (ICC)     #
+icc_shell> ##########################################
+icc_shell> ################## Library Files ######################
+icc_shell> lappend search_path /home/IC/Projects/axi/libraries/std_cells
+. /opt/Synopsys/ICC2016/libraries/syn /opt/Synopsys/ICC2016/minpower/syn /opt/Synopsys/ICC2016/dw/syn_ver /opt/Synopsys/ICC2016/dw/sim_ver /home/IC/Projects/axi/libraries/std_cells
+icc_shell> lappend search_path /home/IC/Projects/axi/libraries/lef
+. /opt/Synopsys/ICC2016/libraries/syn /opt/Synopsys/ICC2016/minpower/syn /opt/Synopsys/ICC2016/dw/syn_ver /opt/Synopsys/ICC2016/dw/sim_ver /home/IC/Projects/axi/libraries/std_cells /home/IC/Projects/axi/libraries/lef
+icc_shell> lappend search_path /home/IC/Projects/axi/libraries/tf
+. /opt/Synopsys/ICC2016/libraries/syn /opt/Synopsys/ICC2016/minpower/syn /opt/Synopsys/ICC2016/dw/syn_ver /opt/Synopsys/ICC2016/dw/sim_ver /home/IC/Projects/axi/libraries/std_cells /home/IC/Projects/axi/libraries/lef /home/IC/Projects/axi/libraries/tf
+icc_shell> lappend search_path /home/IC/Projects/axi/dft
+. /opt/Synopsys/ICC2016/libraries/syn /opt/Synopsys/ICC2016/minpower/syn /opt/Synopsys/ICC2016/dw/syn_ver /opt/Synopsys/ICC2016/dw/sim_ver /home/IC/Projects/axi/libraries/std_cells /home/IC/Projects/axi/libraries/lef /home/IC/Projects/axi/libraries/tf /home/IC/Projects/axi/dft
+icc_shell> set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+icc_shell> set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+icc_shell> set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+icc_shell> ## Standard Cell libraries
+icc_shell> set target_library [list $TTLIB $FFLIB $SSLIB]
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+icc_shell> ## Standard Cell & Hard Macros libraries
+icc_shell> set link_library [list * $TTLIB $FFLIB $SSLIB]
+* scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+icc_shell> # ========= 0. Set Up Environment =========
+icc_shell> set DESIGN_NAME "axi"
+axi
+icc_shell> set TECH "tsmc13fsg_4lm.tf"
+tsmc13fsg_4lm.tf
+icc_shell> set MW_LIB "axi_mw_lib"
+axi_mw_lib
+icc_shell> set TOP_MODULE "slave_mem_axi4lite"
+slave_mem_axi4lite
+icc_shell> create_mw_lib $MW_LIB -technology /home/IC/Projects/axi/libraries/tf/tsmc13fsg_4lm.tf -open
+Start to load technology file /home/IC/Projects/axi/libraries/tf/tsmc13fsg_4lm.tf.
+Warning: ContactCode 'CONT1' is missing the attribute 'unitMinResistance'. (line 648) (TFCHK-014)
+Warning: ContactCode 'CONT1' is missing the attribute 'unitNomResistance'. (line 648) (TFCHK-014)
+Warning: ContactCode 'CONT1' is missing the attribute 'unitMaxResistance'. (line 648) (TFCHK-014)
+Warning: Cut layer 'VIA12' has a non-cross primary default ContactCode 'via1'. (line 666) (TFCHK-092)
+Warning: Layer 'METAL1' has a pitch 0.41 that does not match the recommended wire-to-via pitch 0.365 or 0.405. (TFCHK-049)
+Warning: Layer 'METAL3' has a pitch 0.41 that does not match the recommended wire-to-via pitch 0.54 or 0.5. (TFCHK-049)
+Warning: Layer 'METAL3' has a pitch 0.41 that does not match the doubled pitch 0.82 or tripled pitch 1.23. (TFCHK-050)
+Technology file /home/IC/Projects/axi/libraries/tf/tsmc13fsg_4lm.tf has been loaded successfully.
+{axi_mw_lib}
+icc_shell> set_mw_lib_reference /home/IC/Projects/axi/PnR/axi_mw_lib
+icc_shell> import_designs -format verilog -top slave_mem_axi4lite -cel slave_mem_axi4lite -rp_constraint /home/IC/Projects/axi/PnR/placement.tcl {/home/IC/Projects/axi/dft/axi_scan.v}
+Loading db file '/home/IC/Projects/axi/libraries/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Projects/axi/libraries/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/home/IC/Projects/axi/libraries/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/opt/Synopsys/ICC2016/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/ICC2016/libraries/syn/standard.sldb'
+Type of creating bus for undefined cells : 0
+
+*****  Verilog HDL translation! *****
+
+*****    Start Pass 1 *****
+
+*****  Pass 1 Complete *****
+Elapsed =    0:00:00, CPU =    0:00:00
+
+*****  Verilog HDL translation! *****
+
+*****    Start Pass 2 *****
+Error: Module 'NOR3BX4M' is not defined.  (MWNL-297)
+Error: Verilog parser cannot parse the /home/IC/Projects/axi/dft/axi_scan.v source file. (MWNL-047)
+placeDesign -inPlaceOpt -prePlaceOpt
+Error: unknown command 'placeDesign' (CMD-005)
+addTieHiLo -cell TIELOM -prefix LTIE
+Error: unknown command 'addTieHiLo' (CMD-005)
+addTieHiLo -cell TIEHIM -prefix HTIE
+Error: unknown command 'addTieHiLo' (CMD-005)
+0
+icc_shell> 
+Exit IC Compiler!

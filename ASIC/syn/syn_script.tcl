@@ -1,0 +1,75 @@
+################## Design Compiler Library Files ######################
+
+lappend search_path /home/IC/Projects/axi/libraries/std_cells
+lappend search_path /home/IC/Projects/axi/rtl
+
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+
+## Standard Cell libraries 
+set target_library [list $TTLIB $FFLIB $SSLIB]
+
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $TTLIB $FFLIB $SSLIB]
+
+############################ READ RTL ##################################
+set TOP slave_mem_axi4lite
+read_file -format sverilog {mem_single_port.sv rd_fsm.sv wr_fsm.sv axi4lite_if.sv slave_mem_axi4lite.sv}
+current_design $TOP
+############################ Link & check design #######################
+link
+check_design
+
+############################ Design Constraints ##################################
+##input drive cell
+set_driving_cell -library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -lib_cell BUFX32M [all_inputs]
+
+##output delay
+set_load 50 [all_outputs]
+##wire model
+set_wire_load_model -name "tsmc13_wl30" -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+##operating condition
+set_operating_conditions -min_library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c -min scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c -max_library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -max scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+############################ Design Optimization Constraints #######################
+##Clock Constraints
+create_clock -name CLK [get_ports CLK] -period 12 
+set_clock_uncertainty -setup 1 [get_clocks CLK]
+set_clock_uncertainty -hold 0.5 [get_clocks CLK]
+set_clock_transition -rise 0.05 [get_clocks CLK]
+set_clock_transition -fall 0.05 [get_clocks CLK]
+set_clock_latency 0 [get_clocks CLK]
+
+set_dont_touch_network CLK
+set_dont_touch_network [get_ports RSTn]
+set_fix_hold [get_clocks CLK]
+##input delay
+set_input_delay 0.2 -clock CLK [all_inputs]
+##output delay
+set_output_delay 0.2 -clock CLK [all_outputs]
+##area 
+set_max_area 0
+##power
+##set_max_dynamic 0
+##set_max_leakage 0
+
+set_max_fanout 10 [current_design]
+##################################### Compile #################################
+compile -map_effort medium
+##compile_ultra -no_autoungroup
+##################################### Output files #################################
+write -format verilog -hierarchy -output axi_gls.v
+write_sdf axi_gls.sdf
+write_sdc axi_gls.sdc
+write -format ddc -hierarchy -output axi.ddc
+set_svf axi.svf
+################# reporting #######################
+report_power -hierarchy > power.rpt
+report_area -hierarchy > area.rpt
+report_timing -delay_type min > hold.rpt
+report_timing -delay_type max > setup.rpt
+report_clock -attributes > clocks.rpt
+report_constraint -all_violators > constraints.rpt
+##gui_start
+#exit

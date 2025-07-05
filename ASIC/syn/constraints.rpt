@@ -1,0 +1,181 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : slave_mem_axi4lite
+Version: K-2015.06
+Date   : Wed Jun 25 03:39:49 2025
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   axi_slave.ARREADY            0.79          17.70         -16.91  (VIOLATED)
+       PIN :   U26/Y            0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.WREADY             0.79          17.70         -16.91  (VIOLATED)
+       PIN :   U28/Y            0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.BVALID             0.79          17.70         -16.91  (VIOLATED)
+       PIN :   U32/Y            0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RVALID             0.79          17.70         -16.91  (VIOLATED)
+       PIN :   U30/Y            0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[0]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4025/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[1]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4027/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[2]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4023/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[3]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4021/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[4]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4019/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[5]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4017/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[6]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4015/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[7]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4013/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[8]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4011/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[9]           0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4009/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[10]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4007/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[11]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4005/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[12]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4003/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[13]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U4001/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[14]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3999/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[15]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3997/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[16]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3995/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[17]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3993/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[18]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3991/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[19]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3989/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[20]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3987/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[21]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3985/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[22]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3983/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[23]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3981/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[24]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3979/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[25]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3977/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[26]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3975/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[27]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3973/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[28]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3971/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[29]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3969/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[30]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3967/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.RDATA[31]          0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_mem/U3965/Y
+                                0.79          17.70         -16.91  (VIOLATED)
+   axi_slave.AWREADY            0.79          17.70         -16.91  (VIOLATED)
+       PIN :   u0_fsm/U74/Y     0.79          17.70         -16.91  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      37               -625.65  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   axi_slave.ARREADY            3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.AWREADY            3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.BVALID             3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[0]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[1]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[2]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[3]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[4]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[5]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[6]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[7]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[8]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[9]           3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[10]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[11]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[12]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[13]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[14]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[15]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[16]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[17]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[18]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[19]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[20]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[21]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[22]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[23]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[24]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[25]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[26]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[27]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[28]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[29]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[30]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RDATA[31]          3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.RVALID             3.69          50.03         -46.34  (VIOLATED)
+   axi_slave.WREADY             3.69          50.03         -46.34  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      37              -1714.52  
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   slave_mem_axi4lite           0.00       2655494.25     -2655494.25
+                                                                    (VIOLATED)
+
+
+1

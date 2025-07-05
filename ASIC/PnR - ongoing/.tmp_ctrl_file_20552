@@ -1,0 +1,2 @@
+LIBRARY    axi_mw_lib
+  REFERENCE    /home/IC/Projects/axi/libraries/tf/tsmc13fsg_4lm.tf

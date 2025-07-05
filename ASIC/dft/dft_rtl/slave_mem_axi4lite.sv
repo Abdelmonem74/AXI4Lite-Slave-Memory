@@ -1,0 +1,94 @@
+module slave_mem_axi4lite #(parameter ADDR_WIDTH = 6, DATA_WIDTH = 32) (
+    input logic CLK,
+    input logic test_clk,
+    input logic RSTn,
+    input logic test_rst,
+    input logic si,
+    input logic se,
+    input logic test_mode,
+    output logic so,
+    axi4lite_if.slave axi_slave
+);
+
+    logic RSTn_sync;
+    logic CLK_M,RSTn_M;
+    // intermediate signals
+    logic [ADDR_WIDTH-1:0] waddr,addr_int;
+    logic [DATA_WIDTH-1:0] wr_data;
+    // Memory instantiation
+    mem_single_port #(
+        .DATA_WIDTH(DATA_WIDTH),
+        .ADDR_WIDTH(ADDR_WIDTH)
+    ) u0_mem (
+        .rd_data(axi_slave.RDATA   ),            
+        .wr_data(wr_data ),     
+        .wr_en  (wr_en   ),        
+        .addr   (addr_int),
+        .CLK    (CLK_M   ),  
+        .RSTn   (RSTn_sync)      
+    );
+
+    // Write FSM instantiation
+    wr_fsm  #(
+        .DATA_WIDTH(DATA_WIDTH),
+        .ADDR_WIDTH(ADDR_WIDTH)
+    ) u0_fsm (
+        .AWREADY        (axi_slave.AWREADY),
+        .AWADDR         (axi_slave.AWADDR),
+        .AWVALID        (axi_slave.AWVALID),
+        .WREADY         (axi_slave.WREADY),
+        .WDATA          (axi_slave.WDATA),
+        .WSTRB          (axi_slave.WSTRB),
+        .WVALID         (axi_slave.WVALID),
+        .BVALID         (axi_slave.BVALID),
+        .BRESP          (axi_slave.BRESP),
+        .BREADY         (axi_slave.BREADY),
+        .wr_en          (wr_en),
+        .wr_data_masked (wr_data),
+        .addr           (waddr),
+        .CLK            (CLK_M),
+        .RSTn           (RSTn_sync)
+
+    );
+
+    rd_fsm #(
+        .DATA_WIDTH(DATA_WIDTH),
+        .ADDR_WIDTH(ADDR_WIDTH)
+    ) u1_fsm (
+        .ARVALID(axi_slave.ARVALID),
+        .ARREADY(axi_slave.ARREADY),
+        .RVALID (axi_slave.RVALID ),
+        .RRESP  (axi_slave.RRESP  ),
+        .RREADY (axi_slave.RREADY ),
+        .CLK    (CLK_M  ),
+        .RSTn   (RSTn_sync)
+    );
+
+    
+    always_comb begin : Address_MUX
+        if (wr_en) begin
+            addr_int = waddr;
+        end
+        else begin
+            addr_int = axi_slave.ARADDR;
+        end
+    end
+    //RST synchronizer
+    logic temp;
+    
+    assign CLK_M   = test_mode ? test_clk  : CLK;
+    assign RSTn_M  = test_mode ? test_rst : RSTn;
+
+always_ff @(posedge CLK_M or negedge RSTn_M) begin : RESET_SYNCHRONIZER
+    if (!RSTn_M) begin
+        temp <= 1'b0;
+        RSTn_sync <= 1'b0;
+    end else begin
+        temp <= 1'b1;
+        RSTn_sync <= temp;
+    end
+end
+
+       
+
+endmodule
